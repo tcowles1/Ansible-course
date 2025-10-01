@@ -1,0 +1,12 @@
+---
+- hosts: all 
+  become: true
+  pre_tasks:
+
+- name: Update all packages
+- hosts: all
+  tasks:
+   - name: Update all installed packages to the latest version
+     ansible.builtin.dnf:
+       name: "*"
+       state: latest
